@@ -42,6 +42,20 @@ const styles = StyleSheet.create({
     marginVertical: 5,
     color: '#cccccc',
   },
+  sundayHeading: {
+    flex: 1,
+    fontSize: 15,
+    textAlign: 'center',
+    marginVertical: 5,
+    color: 'red',
+  },
+  saturdayHeading: {
+    flex: 1,
+    fontSize: 15,
+    textAlign: 'center',
+    marginVertical: 5,
+    color: 'blue',
+  },
   weekRow: {
     flexDirection: 'row',
   },

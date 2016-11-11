@@ -76,7 +76,7 @@ export default class Calendar extends Component {
   componentDidUpdate() {
     this.scrollToItem(VIEW_INDEX);
   }
-  
+
   componentWillReceiveProps(props) {
     if (props.selectedDate) {
       this.setState({selectedMoment: props.selectedDate});
@@ -229,9 +229,9 @@ export default class Calendar extends Component {
       headings.push(
         <Text
           key={i}
-          style={j === 0 || j === 6 ?
-            [styles.weekendHeading, this.props.customStyle.weekendHeading] :
-            [styles.dayHeading, this.props.customStyle.dayHeading]}
+          style={ j === 0 ? [styles.sundayHeading, this.props.customStyle.sundayHeading] :
+                  j === 6 ? [styles.saturdayHeading, this.props.customStyle.saturdayHeading] :
+                            [styles.dayHeading, this.props.customStyle.dayHeading]}
         >
           {this.props.dayHeadings[j]}
         </Text>
@@ -259,7 +259,7 @@ export default class Calendar extends Component {
             </Text>
           </TouchableOpacity>
           <Text style={[styles.title, this.props.customStyle.title]}>
-            {localizedMonth} {this.state.currentMonthMoment.year()}
+            {this.state.currentMonthMoment.year()}년 {localizedMonth}
           </Text>
           <TouchableOpacity
             style={[styles.controlButton, this.props.customStyle.controlButton]}
